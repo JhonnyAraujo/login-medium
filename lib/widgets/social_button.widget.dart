@@ -10,8 +10,9 @@ class SocialButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {},
+      borderRadius: BorderRadius.circular(55),
       child: Container(
-        height: 55,
+        height: 50,
         decoration: BoxDecoration(
           border: Border.all(),
           borderRadius: BorderRadius.circular(55),
@@ -19,7 +20,7 @@ class SocialButton extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Positioned(left: 20, child: Image.asset(pathImage, width: 20)),
+            Positioned(left: 20, child: Image.asset(pathImage, width: 15)),
             Text(text),
           ],
         ),

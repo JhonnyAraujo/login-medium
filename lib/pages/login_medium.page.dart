@@ -28,6 +28,11 @@ class LoginMediumPage extends StatelessWidget {
                 pathImage: "assets/images/google.png",
                 text: "Sign up with Google",
               ),
+              SizedBox(height: 15),
+              SocialButton(
+                pathImage: "assets/images/email.png",
+                text: "Sign up with Google",
+              ),
             ],
           ),
         ),
