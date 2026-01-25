@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_medium/widgets/social_button.widget.dart';
+import 'package:login_medium/widgets/terms_ands_privacy.widget.dart';
 
 class LoginMediumPage extends StatelessWidget {
   const LoginMediumPage({super.key});
@@ -48,6 +49,21 @@ class LoginMediumPage extends StatelessWidget {
               Center(
                 child: SocialButton(pathImage: "assets/images/facebook.png"),
               ),
+              SizedBox(height: 40),
+              RichText(
+                text: TextSpan(
+                  text: "Already have an account? ",
+                  style: TextStyle(color: Colors.black),
+                  children: [
+                    TextSpan(
+                      text: "Sign in",
+                      style: TextStyle(color: Colors.green),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 40),
+              TermsAndsPrivacy(),
             ],
           ),
         ),

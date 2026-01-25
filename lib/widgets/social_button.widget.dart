@@ -10,13 +10,13 @@ class SocialButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {},
-      borderRadius: BorderRadius.circular(55),
+      borderRadius: BorderRadius.circular(50),
       child: Container(
-        height: 55,
-        width: text == null ? 55 : double.infinity,
+        height: 50,
+        width: text == null ? 50 : double.infinity,
         decoration: BoxDecoration(
           border: Border.all(),
-          borderRadius: BorderRadius.circular(55),
+          borderRadius: BorderRadius.circular(50),
         ),
         child: Stack(
           alignment: Alignment.center,
