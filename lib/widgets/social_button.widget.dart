@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class SocialButton extends StatelessWidget {
   final String pathImage;
-  final String text;
+  final String? text;
 
-  const SocialButton({super.key, required this.pathImage, required this.text});
+  const SocialButton({super.key, required this.pathImage, this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,8 @@ class SocialButton extends StatelessWidget {
       onTap: () {},
       borderRadius: BorderRadius.circular(55),
       child: Container(
-        height: 50,
+        height: 55,
+        width: text == null ? 55 : double.infinity,
         decoration: BoxDecoration(
           border: Border.all(),
           borderRadius: BorderRadius.circular(55),
@@ -20,8 +21,11 @@ class SocialButton extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Positioned(left: 20, child: Image.asset(pathImage, width: 15)),
-            Text(text),
+            Positioned(
+              left: text == null ? null : 20,
+              child: Image.asset(pathImage, width: 17),
+            ),
+            if (text != null) Text(text!, style: TextStyle(fontSize: 15)),
           ],
         ),
       ),

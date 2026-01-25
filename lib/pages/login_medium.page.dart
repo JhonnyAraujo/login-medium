@@ -28,10 +28,25 @@ class LoginMediumPage extends StatelessWidget {
                 pathImage: "assets/images/google.png",
                 text: "Sign up with Google",
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 10),
               SocialButton(
                 pathImage: "assets/images/email.png",
-                text: "Sign up with Google",
+                text: "Sign up with Email",
+              ),
+              SizedBox(height: 40),
+              Row(
+                children: [
+                  Expanded(child: Divider(color: Colors.black)),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Text("Or, sign up with"),
+                  ),
+                  Expanded(child: Divider(color: Colors.black)),
+                ],
+              ),
+              SizedBox(height: 40),
+              Center(
+                child: SocialButton(pathImage: "assets/images/facebook.png"),
               ),
             ],
           ),
