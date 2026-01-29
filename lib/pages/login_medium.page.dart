@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_medium/widgets/image_button.widget.dart';
 import 'package:login_medium/widgets/social_button.widget.dart';
 import 'package:login_medium/widgets/terms_ands_privacy.widget.dart';
 
@@ -10,59 +11,72 @@ class LoginMediumPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 60, horizontal: 25),
+          padding: EdgeInsets.symmetric(vertical: 40, horizontal: 30),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset("assets/images/medium.png", width: 60, height: 60),
-              const Expanded(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
+              // Image.asset("assets/images/medium.png", width: 100),
+              Align(
+                alignment: .center,
+                child: SizedBox(
+                  width: 45,
+                  child: Image.asset("assets/images/medium.png"),
+                ),
+              ),
+
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
                     "Join Medium.",
-                    style: TextStyle(fontSize: 50),
+                    style: TextStyle(fontSize: 42, fontFamily: "serif"),
                     textAlign: TextAlign.center,
                   ),
-                ),
-              ),
-              SocialButton(
-                pathImage: "assets/images/google.png",
-                text: "Sign up with Google",
-              ),
-              SizedBox(height: 10),
-              SocialButton(
-                pathImage: "assets/images/email.png",
-                text: "Sign up with Email",
-              ),
-              SizedBox(height: 40),
-              Row(
-                children: [
-                  Expanded(child: Divider(color: Colors.black)),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text("Or, sign up with"),
+                  SizedBox(height: 30),
+                  SocialButton(
+                    pathImage: "assets/images/google.png",
+                    text: "Sign up with Google",
                   ),
-                  Expanded(child: Divider(color: Colors.black)),
+                  SizedBox(height: 10),
+                  SocialButton(
+                    pathImage: "assets/images/email.png",
+                    text: "Sign up with Email",
+                  ),
+                  SizedBox(height: 25),
+                  Row(
+                    children: [
+                      Expanded(child: Divider(color: Colors.grey)),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          "Or, sign up with",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ),
+                      Expanded(child: Divider(color: Colors.grey)),
+                    ],
+                  ),
+                  SizedBox(height: 25),
+                  Center(
+                    child: ImageButton(pathImage: "assets/images/facebook.png"),
+                  ),
+                  SizedBox(height: 35),
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      text: "Already have an account? ",
+                      style: TextStyle(color: Colors.black),
+                      children: [
+                        TextSpan(
+                          text: "Sign in",
+                          style: TextStyle(color: Colors.green),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
-              SizedBox(height: 40),
-              Center(
-                child: SocialButton(pathImage: "assets/images/facebook.png"),
-              ),
-              SizedBox(height: 40),
-              RichText(
-                text: TextSpan(
-                  text: "Already have an account? ",
-                  style: TextStyle(color: Colors.black),
-                  children: [
-                    TextSpan(
-                      text: "Sign in",
-                      style: TextStyle(color: Colors.green),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 40),
               TermsAndsPrivacy(),
             ],
           ),
