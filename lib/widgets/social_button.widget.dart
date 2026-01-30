@@ -10,15 +10,21 @@ class SocialButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return OutlinedButton(
       onPressed: () {},
-
-      child: Stack(
-        alignment: .center,
+      style: OutlinedButton.styleFrom(
+        minimumSize: const Size(double.infinity, 52),
+      ),
+      child: Row(
         children: [
-          Align(
-            alignment: .centerLeft,
-            child: Image.asset(pathImage, width: 17),
+          Image.asset(pathImage, width: 24, height: 24),
+
+          Expanded(
+            child: Text(
+              text,
+              textAlign: .center,
+              style: TextStyle(fontSize: 16),
+            ),
           ),
-          Text(text, style: TextStyle(fontSize: 15)),
+          const SizedBox(width: 24),
         ],
       ),
     );
