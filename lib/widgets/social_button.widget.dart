@@ -12,6 +12,7 @@ class SocialButton extends StatelessWidget {
       onPressed: () {},
       style: OutlinedButton.styleFrom(
         minimumSize: const Size(double.infinity, 52),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
       ),
       child: Row(
         children: [
@@ -21,7 +22,7 @@ class SocialButton extends StatelessWidget {
             child: Text(
               text,
               textAlign: .center,
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16, color: Colors.black),
             ),
           ),
           const SizedBox(width: 24),
