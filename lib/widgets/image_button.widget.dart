@@ -7,21 +7,10 @@ class ImageButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.circular(50),
-      child: Container(
-        height: 50,
-        width: 50,
-        decoration: BoxDecoration(
-          border: Border.all(),
-          borderRadius: BorderRadius.circular(50),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(13.0),
-          child: Image.asset(pathImage, width: 20),
-        ),
-      ),
+    return IconButton.outlined(
+      onPressed: () {},
+      padding: const EdgeInsets.all(15),
+      icon: Image.asset(pathImage, width: 24, height: 24),
     );
   }
 }
