@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:login_medium/widgets/divider_middle_text.widget.dart';
-import 'package:login_medium/widgets/image_button.widget.dart';
 import 'package:login_medium/widgets/social_button.widget.dart';
 import 'package:login_medium/widgets/terms_ands_privacy.widget.dart';
 
@@ -47,7 +45,23 @@ class LoginMediumPage extends StatelessWidget {
                     text: "Sign up with Email",
                   ),
                   SizedBox(height: 25),
-                  DividerWithMiddleText(text: "Or, sign up with"),
+                  Row(
+                    spacing: 8,
+                    children: [
+                      Expanded(
+                        key: ValueKey("dividerLeft"),
+                        child: Divider(thickness: 2, color: Colors.black26),
+                      ),
+                      Text(
+                        "Or, sign up with",
+                        style: TextStyle(color: Colors.black45),
+                      ),
+                      Expanded(
+                        key: ValueKey("dividerRight"),
+                        child: Divider(thickness: 2, color: Colors.black26),
+                      ),
+                    ],
+                  ),
                   SizedBox(height: 25),
                   Center(
                     key: ValueKey("buttonFacebook"),
