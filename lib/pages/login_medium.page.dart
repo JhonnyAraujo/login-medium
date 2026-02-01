@@ -11,23 +11,23 @@ class LoginMediumPage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 40, horizontal: 30),
+
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Image.asset("assets/images/medium.png", width: 100),
-              Align(
-                alignment: .center,
-                child: SizedBox(
-                  width: 45,
-                  child: Image.asset("assets/images/medium.png"),
-                ),
+              Image.asset(
+                key: ValueKey("imageMedium"),
+                "assets/images/medium.png",
+                height: 50,
+                fit: BoxFit.contain,
               ),
 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
+                    key: ValueKey("textTitle"),
                     "Join Medium.",
                     style: TextStyle(fontSize: 42, fontFamily: "serif"),
                     textAlign: TextAlign.center,
@@ -49,23 +49,29 @@ class LoginMediumPage extends StatelessWidget {
                     spacing: 8,
                     children: [
                       Expanded(
-                        key: ValueKey("dividerLeft"),
-                        child: Divider(thickness: 2, color: Colors.black26),
+                        child: Divider(
+                          key: ValueKey("dividerLeft"),
+                          thickness: 2,
+                          color: Colors.black26,
+                        ),
                       ),
                       Text(
                         "Or, sign up with",
                         style: TextStyle(color: Colors.black45),
                       ),
                       Expanded(
-                        key: ValueKey("dividerRight"),
-                        child: Divider(thickness: 2, color: Colors.black26),
+                        child: Divider(
+                          key: ValueKey("dividerRight"),
+                          thickness: 2,
+                          color: Colors.black26,
+                        ),
                       ),
                     ],
                   ),
                   SizedBox(height: 25),
                   Center(
-                    key: ValueKey("buttonFacebook"),
                     child: IconButton.outlined(
+                      key: ValueKey("buttonFacebook"),
                       onPressed: () {},
                       padding: const EdgeInsets.all(15),
                       icon: Image.asset(
