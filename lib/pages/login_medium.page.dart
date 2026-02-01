@@ -36,11 +36,13 @@ class LoginMediumPage extends StatelessWidget {
                   ),
                   SizedBox(height: 30),
                   SocialButton(
+                    key: ValueKey("signupGoogle"),
                     pathImage: "assets/images/google.png",
                     text: "Sign up with Google",
                   ),
                   SizedBox(height: 10),
                   SocialButton(
+                    key: ValueKey("signupEmail"),
                     pathImage: "assets/images/email.png",
                     text: "Sign up with Email",
                   ),
@@ -48,7 +50,16 @@ class LoginMediumPage extends StatelessWidget {
                   DividerWithMiddleText(text: "Or, sign up with"),
                   SizedBox(height: 25),
                   Center(
-                    child: ImageButton(pathImage: "assets/images/facebook.png"),
+                    key: ValueKey("buttonFacebook"),
+                    child: IconButton.outlined(
+                      onPressed: () {},
+                      padding: const EdgeInsets.all(15),
+                      icon: Image.asset(
+                        "assets/images/facebook.png",
+                        width: 24,
+                        height: 24,
+                      ),
+                    ),
                   ),
                   SizedBox(height: 35),
                   RichText(
